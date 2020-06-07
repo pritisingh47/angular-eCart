@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+
+.cart-item, .filters{
+    font-size: small;
+}
+
+.card, .cart-item, .btn{
+    border-radius: 0;
+}
+
+.list-group-item:first-child {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.product-item{
+    font-size: smaller;
+}
+
+.fa-heart{
+    color:palevioletred;
+    cursor:pointer;
+}

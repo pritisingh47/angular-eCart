@@ -1,0 +1,126 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Product1",
+      "description": "This is a wider product1 with supporting text below as a natuThis is a wider product1 with supporting text below as a natural lead-iThis is a wider product1 with supporting text below as a natural lead-iral lead-iThis is a wider product1 with supporting text below as a natural lead-i",
+      "price": 100,
+      "imageUrl": "https://www.kameswarijewellers.com/pub/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/d/3/d33a9470_earing_1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Product2",
+      "description": "This is a wider product1 with supporting text below as a natural lead-i",
+      "price": 200,
+      "imageUrl": "https://www.kameswarijewellers.com/pub/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/d/3/d33a4272_earring_logo_1.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Product3",
+      "description": "This is a wider product1 with supporting text below as a natural lead-i",
+      "price": 300,
+      "imageUrl": "https://www.kameswarijewellers.com/pub/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/d/3/d33a9470_earing_1.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Product4",
+      "description": "This is a wider product1 with supporting text below as a natural lead-i",
+      "price": 400,
+      "imageUrl": "https://www.kameswarijewellers.com/pub/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/d/3/d33a9470_earing_1.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Product5",
+      "description": "This is a wider product1 with supporting text below as a natural lead-i",
+      "price": 500,
+      "imageUrl": "https://www.kameswarijewellers.com/pub/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/d/3/d33a9470_earing_1.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Product6",
+      "description": "This is a wider product1 with supporting text below as a natural lead-i",
+      "price": 600,
+      "imageUrl": "https://www.kameswarijewellers.com/pub/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/d/3/d33a9470_earing_1.jpg"
+    }
+  ],
+  "wishlist": [
+    {
+      "id": 3
+    },
+    {
+      "id": 4
+    },
+    {
+      "id": 5
+    }
+  ],
+  "carts": [
+    {
+      "productItem": {
+        "id": 3,
+        "name": "Product3",
+        "description": "This is a wider product1 with supporting text below as a natural lead-i",
+        "price": 300,
+        "imageUrl": "https://www.kameswarijewellers.com/pub/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/d/3/d33a9470_earing_1.jpg"
+      },
+      "id": 1
+    },
+    {
+      "productItem": {
+        "id": 2,
+        "name": "Product2",
+        "description": "This is a wider product1 with supporting text below as a natural lead-i",
+        "price": 200,
+        "imageUrl": "https://www.kameswarijewellers.com/pub/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/d/3/d33a4272_earring_logo_1.jpg"
+      },
+      "id": 2
+    },
+    {
+      "productItem": {
+        "id": 3,
+        "name": "Product3",
+        "description": "This is a wider product1 with supporting text below as a natural lead-i",
+        "price": 300,
+        "imageUrl": "https://www.kameswarijewellers.com/pub/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/d/3/d33a9470_earing_1.jpg"
+      },
+      "id": 3
+    },
+    {
+      "productItem": {
+        "id": 1,
+        "name": "Product1",
+        "description": "This is a wider product1 with supporting text below as a natuThis is a wider product1 with supporting text below as a natural lead-iThis is a wider product1 with supporting text below as a natural lead-iral lead-iThis is a wider product1 with supporting text below as a natural lead-i",
+        "price": 100,
+        "imageUrl": "https://www.kameswarijewellers.com/pub/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/d/3/d33a9470_earing_1.jpg"
+      },
+      "id": 4
+    },
+    {
+      "productItem": {
+        "id": 1,
+        "name": "Product1",
+        "description": "This is a wider product1 with supporting text below as a natuThis is a wider product1 with supporting text below as a natural lead-iThis is a wider product1 with supporting text below as a natural lead-iral lead-iThis is a wider product1 with supporting text below as a natural lead-i",
+        "price": 100,
+        "imageUrl": "https://www.kameswarijewellers.com/pub/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/d/3/d33a9470_earing_1.jpg"
+      },
+      "id": 5
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
