@@ -51,9 +51,6 @@
       "id": 5
     },
     {
-      "id": 2
-    },
-    {
       "id": 1
     }
   ],
@@ -107,6 +104,16 @@
         "imageUrl": "https://www.kameswarijewellers.com/pub/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/d/3/d33a9470_earing_1.jpg"
       },
       "id": 5
+    },
+    {
+      "productItem": {
+        "id": 2,
+        "name": "Product2",
+        "description": "This is a wider product1 with supporting text below as a natural lead-i",
+        "price": 200,
+        "imageUrl": "https://www.kameswarijewellers.com/pub/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/d/3/d33a4272_earring_logo_1.jpg"
+      },
+      "id": 6
     }
   ],
   "posts": [

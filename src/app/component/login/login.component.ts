@@ -9,10 +9,12 @@ export class LoginComponent implements OnInit {
 
   model:any={};
 
-  constructor() { }
+  constructor() { 
+    console.log('login componen loaded')
+  }
 
   ngOnInit() {
-    this.model.username='priti';
+    //this.model.username='priti';
   }
 
   login(){

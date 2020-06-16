@@ -8,18 +8,26 @@
                 <form #loginForm="ngForm" (ngSubmit)="login()">
                     <div class="form-group">
                         <label for="username">UserName</label>
-                        <input type="text" id="username" name="username" class="form-control" [(ngModel)]="model.username">
+                        <input type="text" id="username" name="username"  
+                        #username="ngModel" required class="form-control" 
+                        [ngClass]="{'is-invalid': username.touched && username.invalid}" 
+                        [(ngModel)]="model.username">
+                        <span class="invalid-feedback">Name can't be empty</span>
                     </div>
                     <div class="form-group">
                         <label for="password">Password</label>
-                        <input type="password" id="password" name="password" class="form-control" [(ngModel)]="model.password">
+                        <input type="password" id="password" name="password" 
+                        #password="ngModel" class="form-control" required
+                        [ngClass]="{'is-invalid': password.touched && password.invalid}" 
+                        [(ngModel)]="model.password">
+                        <span class="invalid-feedback">Password can't be empty</span>
                     </div>
                     <div class="form-group">
                         
-                        <input type="checkbox" id="rememeberme" name="remember" [(ngModel)]="model.remember">
+                        <input type="checkbox" id="rememeberme" name="remember" #remember="ngModel" [(ngModel)]="model.remember">
                         <label class="ml-1" for="rememeberme">Remember Me</label>
                     </div>
-                    <button class="btn btn-primary btn-block">Sign In</button>
+                    <button  class="btn btn-primary btn-block" [disabled]="loginForm.invalid">Sign In</button>
                 </form>
             </div>
         </div>

@@ -1,2 +1,66 @@
-<p>register works!</p>
-<a routerLink="/login">Login</a>
+<div class="row">
+    <div class="col-md-4 offset-md-4">
+        <div class="card">
+            <div class="card-header" style="text-align: center;">
+                <h3>Register here</h3>
+            </div>
+            <div class="guest-form card-body">
+                <form [formGroup]="signUpForm" (submit)="register()">
+                    <div class="form-group">
+                        <input placeholder="Name" type="text" class="form-control" 
+                        id="name" 
+                        formControlName="name"
+                        [ngClass]="{'is-invalid':signUpForm.get('name').touched && signUpForm.get('name').invalid}">
+                        <span class="invalid-feedback">
+                            Name can't be blank.
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <input placeholder="Username" type="text" class="form-control" 
+                        id="username" formControlName="username"
+                        [ngClass]="{'is-invalid':signUpForm.get('username').touched && signUpForm.get('username').invalid}">
+                        <span class="invalid-feedback">
+                            Username can't be blank.
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <input placeholder="Email" type="email" 
+                        id="email" class="form-control" 
+                        formControlName="email"
+                        [ngClass]="{'is-invalid':signUpForm.get('email').touched && signUpForm.get('email').invalid}"
+                        >
+                        <span class="invalid-feedback">
+                            <span *ngIf="signUpForm.get('email').hasError('required')">Email can't be blank</span>
+                            <span *ngIf="signUpForm.get('email').hasError('email')">Please enter valid email</span>
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <input placeholder="Password" type="password" class="form-control"
+                        id="password" formControlName="password" [formGroup]="signUpForm"
+                        [ngClass]="{'is-invalid':signUpForm.get('password').touched && signUpForm.get('password').invalid}"
+                        >
+                        
+                       <span class="invalid-feedback">
+                        <span *ngIf="signUpForm.get('password').hasError('required')">Password can't be blank</span>
+                        <span *ngIf="signUpForm.get('password').hasError('minlength')">Please can't be less than 6</span>
+                    
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <input placeholder="Confirm Password" 
+                        type="password" class="form-control" [formGroup]="signUpForm"
+                        id="confirmPassword" 
+                        formControlName="confirmPassword"
+                        [ngClass]="{'is-invalid':signUpForm.get('confirmPassword').touched && signUpForm.get('confirmPassword').invalid}">
+                       
+                        <span class="invalid-feedback">
+                           <span *ngIf="signUpForm.get('confirmPassword').hasError('matchPassword') ">Password is not matching</span> 
+                        </span>
+                    
+                    </div>
+                    <button class="btn btn-primary btn-block" [disabled]="signUpForm.invalid">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
