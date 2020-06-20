@@ -2,7 +2,7 @@
     <div class="col-md-4 offset-md-4">
         <div class="card">
             <div class="card-header" style="text-align: center;">
-                <h3>Register here</h3>
+                <h3>Create Account</h3>
             </div>
             <div class="guest-form card-body">
                 <form [formGroup]="signUpForm" (submit)="register()">
@@ -60,6 +60,10 @@
                     </div>
                     <button class="btn btn-primary btn-block" [disabled]="signUpForm.invalid">Register</button>
                 </form>
+
+                <div class="card-footer" style="text-align: left;font-size: medium;font-style: inherit;">
+                   Already have a account?<a routerLink="/login">Sign In</a>
+                </div>
             </div>
         </div>
     </div>

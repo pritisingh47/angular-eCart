@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Products} from 'src/app/models/products';
 import {cartUrl} from 'src/app/config/app-congif';
-import {Observable} from 'rxjs';
+import {Observable, BehaviorSubject} from 'rxjs';
 import {CartItem} from 'src/app/models/cart-item';
 import{ map } from 'rxjs/operators';
 
@@ -11,12 +11,33 @@ import{ map } from 'rxjs/operators';
 })
 export class CartService {
 
+  cartItems = [];
+  count=0;
+
+  cartItemCount = new BehaviorSubject(this.count);
+
   constructor(private http: HttpClient) { }
 
   addProductToCart(productItem: Products){
+    this.incrementCartItem();
     return this.http.post(cartUrl, {productItem})
   }
-
+  incrementCartItem () {
+    this.getProductFromCart().subscribe(x=>{
+      this.cartItems = x;
+      this.count = this.cartItems.length;
+      this.cartItemCount.next(++this.count);
+    })
+    
+  }
+  initializeCartItem () {
+    this.getProductFromCart().subscribe(x=>{
+      this.cartItems = x;
+      console.log('length ',this.cartItems.length)
+      this.count = this.cartItems.length;
+      this.cartItemCount.next(this.count);
+    })
+  }
   getProductFromCart(): Observable<CartItem[]>{
     return this.http.get<CartItem[]>(cartUrl).pipe(
       map((result: any[])=>{

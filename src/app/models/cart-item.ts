@@ -6,6 +6,7 @@ export class CartItem {
     productName: string
     price: number
     qty: number
+    imageUrl: string
 
     constructor(id: number,product: Products, qty=1){
         this.id = id;
@@ -13,5 +14,6 @@ export class CartItem {
         this.productName = product.name;
         this.price = product.price;
         this.qty = qty
+        this.imageUrl = product.imageUrl;
     }
 }

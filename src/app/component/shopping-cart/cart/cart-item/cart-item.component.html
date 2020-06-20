@@ -1,7 +1,32 @@
-<div class="cart-item">
+<!--<div class="cart-item">
     <span>{{cartItem.productName}}</span>*
     <span>{{cartItem.qty}}</span>:<strong>
         {{cartItem.price * cartItem.qty|currency:'INR'}}</strong>
-
-    
-</div>
+</div>-->
+<table class="table table-bordered">
+    <thead>
+      <tr>
+       
+        <th>Image</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Quatity</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of cartItem">
+          
+          <td><img [src]="item.imageUrl" class="img-thumbnail" style="height:100px;" /></td>
+          <td>{{item.productName}}</td>
+          <td>{{item.price}}</td>
+          <td>
+            {{item.qty}}
+            </td>
+          <td>
+            <button class="btn btn-primary btn-sm" (click)="getpopup(list)">View</button> &nbsp;
+            <button class="btn btn-danger btn-sm" (click)="delpopup(list.product_id)">Delete</button>
+          </td>
+        </tr>
+    </tbody>
+  </table>

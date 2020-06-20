@@ -3,6 +3,7 @@ import { Products } from 'src/app/models/products';
 import { MessangerService } from 'src/app/service/messanger.service';
 import { CartService } from 'src/app/service/cart.service';
 import {WishlistService} from 'src/app/service/wishlist.service';
+import {BehaviorSubject} from 'rxjs';
 
 @Component({
   selector: 'app-product-item',
@@ -15,7 +16,6 @@ export class ProductItemComponent implements OnInit {
 
   @Input() addedToWishlist:boolean;
 
- 
 
   constructor(private msg: MessangerService,
     private cartService: CartService,
@@ -26,7 +26,7 @@ export class ProductItemComponent implements OnInit {
 
   handleAddToCart() {
     //console.log('handleToart:', this.productItem)
-    this.cartService.addProductToCart(this.productItem).subscribe(() => {
+   this.cartService.addProductToCart(this.productItem).subscribe(() => {
       this.msg.sendMsg(this.productItem);
     })
 
