@@ -18,6 +18,7 @@ import {AppRoutingModule} from 'src/app/app-routing.module';
 import { PageNotFoundComponent } from './component/page-not-found/page-not-found.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {AngularFontAwesomeModule} from 'angular-font-awesome';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import {AngularFontAwesomeModule} from 'angular-font-awesome';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

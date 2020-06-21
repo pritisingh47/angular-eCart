@@ -1,7 +1,28 @@
 <div class="alert alert-primary" role="alert" *ngIf="cartItems.length === 0">
     Your cart is emplty.
 </div>
-<app-cart-item [cartItem]="cartItems"></app-cart-item>
+
+<div class="container">
+    <div class="row">
+       
+        <div class="col-md-8">
+            <app-cart-item [cartItem]="cartItems"></app-cart-item>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <strong>Subtotal({{cartItemCount}} items):</strong>{{cartTotal |currency:'INR'}}
+                    
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-primary btn-block">Proceed to Buy</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <!--<ul class="list-group" *ngIf="cartItems.length>0">
     <li class="list-group-item" *ngFor="let item of cartItems">
         <app-cart-item [cartItem]="item"></app-cart-item>

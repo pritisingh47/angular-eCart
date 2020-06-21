@@ -14,8 +14,14 @@ export class CartComponent implements OnInit {
   cartItems = [];
 
   cartTotal = 0;
+
+  cartItemCount = 0;
+
   constructor(private msg: MessangerService,
-    private cartService: CartService) { }
+    private cartService: CartService) {
+      this.cartService.initializeCartItem();
+      cartService.cartItemCount.subscribe(x=> {this.cartItemCount = x})
+     }
 
   ngOnInit() {
     this.loadItemFromCart();
