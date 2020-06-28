@@ -1,0 +1,25 @@
+<div class="container-fluid" *ngIf="router.url == '/' || router.url == '/shop'">
+  <div class="col-12">
+    <ngb-carousel>
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img src="assets/super-sell.jpg" alt="Random first slide">
+        </div>
+        <div class="carousel-caption">
+          <h3>Last few min left...</h3>
+          <p>Cashback on SBI card.</p>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img src="assets/super-sell1.jpg" alt="Random second slide">
+        </div>
+        <div class="carousel-caption">
+          <h3>Last few min left...</h3>
+          <p>Cashback on SBI card.</p>
+        </div>
+      </ng-template>
+      
+    </ngb-carousel>
+  </div>
+</div>

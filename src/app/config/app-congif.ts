@@ -1,7 +1,7 @@
 import { environment } from '../../environments/environment';
 
-export const baseUrl = environment.production ? 'http://localhost:4200' : 'http://localhost:3000'
+export const baseUrl = environment.production ? 'https://angular-ecart.firebaseio.com/' : 'https://angular-ecart.firebaseio.com/'
 
-export const productUrl = baseUrl + '/products';
-export const cartUrl = baseUrl + '/carts';
-export const wishlistUrl = baseUrl + '/wishlist';
+export const productUrl = baseUrl + '/products.json';
+export const cartUrl = baseUrl + '/carts.json';
+export const wishlistUrl = baseUrl + '/wishlist.json';

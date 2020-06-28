@@ -4,6 +4,7 @@ import { MessangerService } from 'src/app/service/messanger.service';
 import { CartService } from 'src/app/service/cart.service';
 import {WishlistService} from 'src/app/service/wishlist.service';
 import {BehaviorSubject} from 'rxjs';
+import {ToastService} from 'src/app/service/toast.service';
 
 @Component({
   selector: 'app-product-item',
@@ -19,15 +20,18 @@ export class ProductItemComponent implements OnInit {
 
   constructor(private msg: MessangerService,
     private cartService: CartService,
-    private wishlistService:WishlistService) { }
+    private wishlistService:WishlistService,
+    private toastService: ToastService) { }
 
   ngOnInit() {
   }
 
   handleAddToCart() {
     //console.log('handleToart:', this.productItem)
+   this.toastService.show('Product added successfully!');
    this.cartService.addProductToCart(this.productItem).subscribe(() => {
       this.msg.sendMsg(this.productItem);
+      
     })
 
   }

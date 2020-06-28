@@ -17,8 +17,12 @@ import { RegisterComponent } from './component/register/register.component';
 import {AppRoutingModule} from 'src/app/app-routing.module';
 import { PageNotFoundComponent } from './component/page-not-found/page-not-found.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {AngularFontAwesomeModule} from 'angular-font-awesome';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { CoroselComponent } from './component/shopping-cart/corosel/corosel.component';
+import {AngularFireModule} from 'angularfire2';
+import {AngularFireDatabaseModule} from 'angularfire2/database';
+import {environment} from 'src/environments/environment';
+import { ToastComponent } from './component/shared/toast/toast.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +38,9 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     ProductItemComponent,
     LoginComponent,
     RegisterComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    CoroselComponent,
+    ToastComponent
   ],
   imports: [
     BrowserModule,
@@ -42,8 +48,9 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    AngularFontAwesomeModule,
-    NgbModule
+    NgbModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]
