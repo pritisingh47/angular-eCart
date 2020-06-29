@@ -7,11 +7,11 @@
             <div class="card-body">
                 <form #loginForm="ngForm" (ngSubmit)="login()">
                     <div class="form-group">
-                        <input placeholder="Username" type="text" id="username" name="username"  
-                        #username="ngModel" required class="form-control" 
-                        [ngClass]="{'is-invalid': username.touched && username.invalid}" 
-                        [(ngModel)]="model.username">
-                        <span class="invalid-feedback">Name can't be empty</span>
+                        <input placeholder="Email" type="text" id="email" name="email"  
+                        #email="ngModel" required class="form-control" 
+                        [ngClass]="{'is-invalid': email.touched && email.invalid}" 
+                        [(ngModel)]="model.email">
+                        <span class="invalid-feedback">Email can't be empty</span>
                     </div>
                     <div class="form-group">
                         
@@ -30,8 +30,8 @@
                 </form>
             </div>
             <div class="card-footer">
-                New to Amazon?<a routerLink="/register">Register Here</a>
-            </div>
+                New to SuperMart?<a routerLink="/register">Register Here</a>
+            </div>  
         </div>
         
     </div>

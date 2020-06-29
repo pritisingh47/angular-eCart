@@ -6,7 +6,7 @@
             </div>
             <div class="guest-form card-body">
                 <form [formGroup]="signUpForm" (submit)="register()">
-                    <div class="form-group">
+                   <!-- <div class="form-group">
                         <input placeholder="Name" type="text" class="form-control" 
                         id="name" 
                         formControlName="name"
@@ -22,7 +22,7 @@
                         <span class="invalid-feedback">
                             Username can't be blank.
                         </span>
-                    </div>
+                    </div>-->
                     <div class="form-group">
                         <input placeholder="Email" type="email" 
                         id="email" class="form-control" 
@@ -46,7 +46,7 @@
                     
                         </span>
                     </div>
-                    <div class="form-group">
+                   <!-- <div class="form-group">
                         <input placeholder="Confirm Password" 
                         type="password" class="form-control" [formGroup]="signUpForm"
                         id="confirmPassword" 
@@ -57,7 +57,7 @@
                            <span *ngIf="signUpForm.get('confirmPassword').hasError('matchPassword') ">Password is not matching</span> 
                         </span>
                     
-                    </div>
+                    </div>-->
                     <button class="btn btn-primary btn-block" [disabled]="signUpForm.invalid">Register</button>
                 </form>
 

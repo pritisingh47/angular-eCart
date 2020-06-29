@@ -1,13 +1,15 @@
-<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+<div class="d-flex flex-column flex-md-row align-items-center 
+p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
     <h5 class="my-0 mr-md-auto font-weight-normal">
         <app-header></app-header>
     </h5>
-    <nav class="my-2 my-md-0 mr-md-3">
-      <a class="p-2 text-dark" routerLink="/shop">Home</a>
-      <a class="p-2 text-dark" href="#"></a>
-      <a class="p-2 text-dark" href="#"></a>
-      <a class="p-2 text-dark" routerLink="/showCartItem"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i>{{count}}</a>
+    <div class="btn-group" *ngIf="showButton">
+      <button class="btn btn-primary" routerLink="/register">Sign up</button>
+      <button class="btn btn-outline-secondary" routerLink="/login">Sign In</button>
+    </div>
+    <nav class="my-2 my-md-0 mr-md-3 ">
+      <a class="p-2 text-dark" routerLink="/showCartItem">
+      <i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i>{{count}}</a>
     </nav>
-    <a class="btn btn-primary" routerLink="/register">Sign up</a>
-    <a class="btn btn-outline-secondary" routerLink="/login">Sign In</a>
+    
   </div>

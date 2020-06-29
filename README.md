@@ -16,8 +16,10 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## How to deploy angular project to github
 
-use these 3 commands:
-1.npm install -g angular-cli-ghpages
-2.ng build --prod --base-href "https://<user-name>.github.io/<repo-name>/"
+use these 3 commands:\
+1.npm install -g angular-cli-ghpages\
+2.ng build --prod --base-href "https://<user-name>.github.io/<repo-name>/"\
 3.ngh --dir dist/<repo-name>
+
+
 
