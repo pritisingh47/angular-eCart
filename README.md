@@ -1,6 +1,6 @@
 # AngularECart
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21.
+Live demo of project [Angular-eCart](https://angular-ecart.web.app/)\
+This project is generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21.
 
 ## Development server
 
