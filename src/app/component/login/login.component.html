@@ -1,19 +1,19 @@
 <div class="row">
     <div class="col-md-4 offset-md-4">
-        <div class="card">
-            <div class="guest-form card-header">
+        <div class="card border border-dark rounded">
+            <div class="guest-form card-header bg-dark  text-white">
                 <h2>Login</h2>
             </div>
             <div class="card-body">
                 <form #loginForm="ngForm" (ngSubmit)="login()">
-                    <div class="form-group">
+                    <div class="form-group border border-dark rounded">
                         <input placeholder="Email" type="text" id="email" name="email"  
                         #email="ngModel" required class="form-control" 
                         [ngClass]="{'is-invalid': email.touched && email.invalid}" 
                         [(ngModel)]="model.email">
                         <span class="invalid-feedback">Email can't be empty</span>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group border border-dark rounded top-buffer">
                         
                         <input placeholder="Password" type="password" id="password" name="password" 
                         #password="ngModel" class="form-control" required
@@ -21,16 +21,16 @@
                         [(ngModel)]="model.password">
                         <span class="invalid-feedback">Password can't be empty</span>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group top-buffer">
                         
                         <input type="checkbox" id="rememeberme" name="remember" #remember="ngModel" [(ngModel)]="model.remember">
                         <label class="ml-1" for="rememeberme">Remember Me</label>
                     </div>
-                    <button  class="btn btn-primary btn-block" [disabled]="loginForm.invalid">Sign In</button>
+                    <button  class="btn btn-primary btn-block rounded border border-dark" [disabled]="loginForm.invalid">Sign In</button>
                 </form>
             </div>
-            <div class="card-footer">
-                New to SuperMart?<a routerLink="/register">Register Here</a>
+            <div class="card-footer bg-dark text-white top-buffer">
+                New to AngularEcart?&nbsp;&nbsp;<a routerLink="/register">Register Here</a>
             </div>  
         </div>
         

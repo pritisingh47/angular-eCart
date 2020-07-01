@@ -24,6 +24,7 @@ import {AngularFireAuthModule} from 'angularfire2/auth';
 import {AngularFireDatabaseModule} from 'angularfire2/database';
 import {environment} from 'src/environments/environment';
 import { ToastComponent } from './component/shared/toast/toast.component';
+import { CategoryComponent } from './component/shopping-cart/category/category.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { ToastComponent } from './component/shared/toast/toast.component';
     RegisterComponent,
     PageNotFoundComponent,
     CoroselComponent,
-    ToastComponent
+    ToastComponent,
+    CategoryComponent
   ],
   imports: [
     BrowserModule,

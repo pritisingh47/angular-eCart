@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-md-4 offset-md-4">
-        <div class="card">
-            <div class="card-header" style="text-align: center;">
+        <div class="card border border-dark rounded">
+            <div class="card-header bg-dark text-white" style="text-align: center;">
                 <h3>Create Account</h3>
             </div>
             <div class="guest-form card-body">
@@ -23,7 +23,7 @@
                             Username can't be blank.
                         </span>
                     </div>-->
-                    <div class="form-group">
+                    <div class="form-group border border-dark rounded">
                         <input placeholder="Email" type="email" 
                         id="email" class="form-control" 
                         formControlName="email"
@@ -34,7 +34,7 @@
                             <span *ngIf="signUpForm.get('email').hasError('email')">Please enter valid email</span>
                         </span>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group border border-dark rounded top-buffer">
                         <input placeholder="Password" type="password" class="form-control"
                         id="password" formControlName="password" [formGroup]="signUpForm"
                         [ngClass]="{'is-invalid':signUpForm.get('password').touched && signUpForm.get('password').invalid}"
@@ -58,13 +58,14 @@
                         </span>
                     
                     </div>-->
-                    <button class="btn btn-primary btn-block" [disabled]="signUpForm.invalid">Register</button>
+                    <button class="btn btn-primary btn-block border border-dark rounded top-buffer" [disabled]="signUpForm.invalid">Register</button>
                 </form>
 
-                <div class="card-footer" style="text-align: left;font-size: medium;font-style: inherit;">
-                   Already have a account?<a routerLink="/login">Sign In</a>
-                </div>
+                
             </div>
+            <div class="card-footer bg-dark text-white border border-dark  top-buffer" style="text-align: left;font-size: medium;font-style: inherit;">
+                Already have a account?&nbsp;&nbsp;<a routerLink="/login">Sign In</a>
+             </div>
         </div>
     </div>
 </div>

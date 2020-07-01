@@ -5,6 +5,7 @@ import { RegisterComponent } from 'src/app/component/register/register.component
 import { NgModule } from '@angular/core';
 import { PageNotFoundComponent } from './component/page-not-found/page-not-found.component';
 import {CartComponent} from 'src/app/component/shopping-cart/cart/cart.component';
+import { ProductListComponent } from './component/shopping-cart/product-list/product-list.component';
 
 export const routes: Route[]=[
     
@@ -13,6 +14,7 @@ export const routes: Route[]=[
     {path:'login',component:LoginComponent},
     {path:'register',component:RegisterComponent},
     {path: 'showCartItem',component: CartComponent},
+    {path: 'showProducts',component:ProductListComponent},
     {path:'**',component:PageNotFoundComponent}
 ];
 
